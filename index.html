@@ -270,13 +270,17 @@
                     <span class="dot"></span>
                     <span class="dot"></span>
                 </div>
+                <div class="testimonial-cta">
+                    <button class="btn journey-btn" onclick="openContactModal()">Start Your Journey</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeContactModal()">&times;</span>
             <div class="contact-form">
                 <h2>Start Your Health Journey</h2>
                 <form id="healthForm">
@@ -305,33 +309,8 @@
                     <button type="submit" class="btn">Get Your Free Consultation</button>
                 </form>
             </div>
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>123 Wellness Way, Health City, HC 12345</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <p>(800) 555-HEAL</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>info@organicwellnesshub.com</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <p>Monday-Friday: 9am-6pm<br>Saturday: 10am-4pm</p>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -354,6 +333,31 @@
                         <li><a href="#practices">Practices</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Information</h4>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Wellness Way, Health City, HC 12345</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(800) 555-HEAL</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@organicwellnesshub.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Monday-Friday: 9am-6pm<br>Saturday: 10am-4pm</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div class="footer-newsletter">
                     <h4>Health Tips Newsletter</h4>

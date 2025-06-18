@@ -171,3 +171,74 @@ document.addEventListener('mousemove', (e) => {
         mouseAtTop = false;
     }
 });
+
+// Modal functionality
+function openContactModal() {
+    const modal = document.getElementById('contactModal');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    launchLeafConfetti();
+}
+
+function closeContactModal() {
+    const modal = document.getElementById('contactModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Close modal when clicking outside of it
+window.addEventListener('click', (e) => {
+    const modal = document.getElementById('contactModal');
+    if (e.target === modal) {
+        closeContactModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeContactModal();
+    }
+});
+
+// Update form submission to close modal
+document.getElementById('healthForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your interest! We will contact you shortly.');
+    this.reset();
+    closeContactModal(); // Close modal after form submission
+});
+
+// Leaf confetti effect
+function launchLeafConfetti() {
+    const confettiContainer = document.createElement('div');
+    confettiContainer.style.position = 'fixed';
+    confettiContainer.style.left = 0;
+    confettiContainer.style.top = 0;
+    confettiContainer.style.width = '100vw';
+    confettiContainer.style.height = '100vh';
+    confettiContainer.style.pointerEvents = 'none';
+    confettiContainer.style.zIndex = 3000;
+    document.body.appendChild(confettiContainer);
+
+    const leaves = ['🍃','🍂','🤸‍♂️','🌿'];
+    const numLeaves = 24;
+    for (let i = 0; i < numLeaves; i++) {
+        const leaf = document.createElement('span');
+        leaf.textContent = leaves[Math.floor(Math.random() * leaves.length)];
+        leaf.style.position = 'absolute';
+        leaf.style.fontSize = `${24 + Math.random() * 18}px`;
+        leaf.style.left = `${50 + (Math.random() - 0.5) * 40}%`;
+        leaf.style.bottom = '40px';
+        leaf.style.opacity = 0.85;
+        leaf.style.transition = 'transform 1.2s cubic-bezier(.4,1.6,.6,1), opacity 1.2s';
+        confettiContainer.appendChild(leaf);
+        setTimeout(() => {
+            leaf.style.transform = `translateY(-${window.innerHeight * (0.7 + Math.random() * 0.3)}px) rotate(${Math.random() * 360}deg)`;
+            leaf.style.opacity = 0;
+        }, 30 + i * 18);
+    }
+    setTimeout(() => {
+        confettiContainer.remove();
+    }, 1800);
+}
