@@ -1132,9 +1132,9 @@ img {
 
 .footer-links ul {
     list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 30px;
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-links ul li {
