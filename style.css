@@ -713,7 +713,7 @@ img {
 
 /* Testimonials Section */
 .testimonials {
-    background-image: url('https://static.vecteezy.com/system/resources/previews/005/243/966/non_2x/lots-of-bright-green-tropical-leaves-as-a-background-with-a-gold-stripe-in-the-middle-free-vector.jpg');
+    background-image: url('https://img.freepik.com/free-photo/bluish-plant-leaves-textured-background_53876-107989.jpg?semt=ais_hybrid&w=740');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -850,7 +850,7 @@ img {
 
 /* Contact Section */
 .contact {
-    background-image: url('https://static.vecteezy.com/system/resources/previews/005/243/966/non_2x/lots-of-bright-green-tropical-leaves-as-a-background-with-a-gold-stripe-in-the-middle-free-vector.jpg');
+    background-image: url('https://img.freepik.com/free-photo/bluish-plant-leaves-textured-background_53876-107989.jpg?semt=ais_hybrid&w=740');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1445,4 +1445,19 @@ img {
 .footer-copyright {
     color: #fff !important;
     opacity: 1 !important;
+}
+
+/* Customers Section - Thin styling */
+.customers-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.customers-section h2 {
+    margin-bottom: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--primary-dark);
+    font-size: 2.2rem;
 }
